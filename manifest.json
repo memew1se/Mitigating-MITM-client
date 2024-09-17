@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Mitigating-MITM-client",
+  "version": "1.0",
+  "description": "Checks certificate consistency across trusted servers to detect potential MITM attacks",
+  "icons": {
+    "48": "icons/icon-default-48.png",
+    "96": "icons/icon-default-96.png"
+  },
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "browsingData"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/icon-default-48.png"
+    },
+    "default_title": "MITM Mitigation",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "scripts": ["background/background.js"]
+  }
+}
